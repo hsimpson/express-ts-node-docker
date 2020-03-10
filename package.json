@@ -1,0 +1,40 @@
+{
+  "name": "express-ts-node-docker",
+  "version": "1.0.0",
+  "description": "Back end example web application with the [Express](https://expressjs.com/) web framework in TypeScript and running in a [Docker](https://www.docker.com/) container, using Windows 10 Pro.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env PORT=8080 ts-node ./src/server.ts",
+    "build": "tsc",
+    "docker-build": "npm run build && docker build --tag my_docker_hub_user/express-ts-node .",
+    "docker-run": "docker run --env PORT=3000 --publish 80:3000 --detach --name awsome-container my_docker_hub_user/express-ts-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsimpson/express-ts-node-docker.git"
+  },
+  "keywords": [],
+  "author": "Daniel Toplak <homer.simpson123@gmx.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hsimpson/express-ts-node-docker/issues"
+  },
+  "homepage": "https://github.com/hsimpson/express-ts-node-docker",
+  "devDependencies": {
+    "@types/express": "^4.17.3",
+    "@types/node": "^13.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "@typescript-eslint/typescript-estree": "^2.23.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,15 @@
+# dirs
+.git
+.vscode
+node_modules
+src/server.ts
+
+#files
+.dockerignore
+.eslintrc.json
+.gitignore
+.prettierrc
+Dockerfile
+LICENSE
+README.md
+tsconfig.json
