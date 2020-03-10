@@ -6,7 +6,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "sourceMap": true,
+    "inlineSourceMap": true,
     "target": "ES2019"
   }
 }

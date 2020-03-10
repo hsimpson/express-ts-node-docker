@@ -7,7 +7,8 @@
     "dev": "cross-env PORT=8080 ts-node ./src/server.ts",
     "build": "tsc",
     "docker-build": "npm run build && docker build --tag my_docker_hub_user/express-ts-node .",
-    "docker-run": "docker run --env PORT=3000 --publish 80:3000 --detach --name awsome-container my_docker_hub_user/express-ts-node"
+    "docker-run": "docker run --rm --env PORT=3000 --publish 80:3000 --detach --name awsome-container my_docker_hub_user/express-ts-node",
+    "docker-run-debug": "docker run --rm --env PORT=3000 --publish 81:3000 --publish 9229:9229 --detach --name awsome-container-DEBUG my_docker_hub_user/express-ts-node node --inspect=0.0.0.0 src/server.js"
   },
   "repository": {
     "type": "git",

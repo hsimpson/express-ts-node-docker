@@ -2,6 +2,7 @@
 .git
 .vscode
 node_modules
+#src/server.js.map
 src/server.ts
 
 #files

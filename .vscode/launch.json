@@ -5,9 +5,9 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "ts-node debug",
       "type": "node",
       "request": "launch",
-      "name": "ts-node debug",
       "args": ["${workspaceRoot}/src/server.ts"],
       "runtimeArgs": ["-r", "ts-node/register"],
       /*
@@ -22,6 +22,16 @@
         "TS_NODE_IGNORE": "false",
         "PORT": "3000"
       }
+    },
+    {
+      "name": "attach to docker container",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "address": "localhost",
+      "localRoot": "${workspaceRoot}",
+      "remoteRoot": "/usr/src/app",
+      "protocol": "inspector"
     }
   ]
 }
