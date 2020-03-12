@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web-debug:
+    #container_name: awsome-container-debug
+    build: .
+    ports:
+      - '81:3000'
+      - '9229:9229'
+    environment:
+      - PORT=3000
+    command: node --inspect=0.0.0.0 ./src/backend/server.js

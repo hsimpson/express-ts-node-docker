@@ -2,14 +2,14 @@
 .git
 .vscode
 node_modules
-#src/server.js.map
-src/server.ts
+src/**/*.ts
 
 #files
 .dockerignore
 .eslintrc.json
 .gitignore
 .prettierrc
+docker-compose*.yml
 Dockerfile
 LICENSE
 README.md

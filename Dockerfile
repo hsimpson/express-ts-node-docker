@@ -1,4 +1,4 @@
-FROM node:lts
+FROM node:lts-alpine
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -17,4 +17,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD [ "node", "src/server.js" ]
+CMD [ "node", "src/backend/server.js" ]

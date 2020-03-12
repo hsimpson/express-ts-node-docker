@@ -21,13 +21,7 @@ npm install
 npm run dev
 ```
 
-## Build docker image
-
-```sh
-npm run docker-build
-```
-
-## Run docker image
+## Build and run docker image
 
 ```sh
 npm run docker-run

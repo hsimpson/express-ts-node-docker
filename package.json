@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "cross-env PORT=8080 ts-node ./src/server.ts",
     "build": "tsc",
-    "docker-build": "npm run build && docker build --tag my_docker_hub_user/express-ts-node .",
-    "docker-run": "docker run --rm --env PORT=3000 --publish 80:3000 --detach --name awsome-container my_docker_hub_user/express-ts-node",
-    "docker-run-debug": "docker run --rm --env PORT=3000 --publish 81:3000 --publish 9229:9229 --detach --name awsome-container-DEBUG my_docker_hub_user/express-ts-node node --inspect=0.0.0.0 src/server.js"
+    "build-debug": "tsc --inlineSourceMap",
+    "docker-build": "npm run build && docker-compose build",
+    "docker-build-debug": "npm run build-debug && docker-compose build",
+    "docker-run": "npm run docker-build && docker-compose --file docker-compose.yml up --detach",
+    "docker-run-debug": "npm run docker-build-debug && docker-compose --file docker-compose-debug.yml up --detach"
   },
   "repository": {
     "type": "git",

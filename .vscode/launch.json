@@ -8,7 +8,7 @@
       "name": "ts-node debug",
       "type": "node",
       "request": "launch",
-      "args": ["${workspaceRoot}/src/server.ts"],
+      "args": ["${workspaceRoot}/src/backend/server.ts"],
       "runtimeArgs": ["-r", "ts-node/register"],
       /*
       "skipFiles": [
